@@ -7,8 +7,8 @@ from huggingface_hub import hf_hub_download
 @st.cache_resource
 def load_detection_model():
     model_path = hf_hub_download(
-        repo_id="Aya2012001/Brain_Tumor_Detection_Segmentation",
-        filename="brain-tumor-detection-using-resnet50.keras"
+         repo_id="Aya2012001/Brain_Tumor_Detection_Segmentation",
+        filename="brain_tumor_detection_best_model.keras"
     )
     model = tf.keras.models.load_model(model_path)
     return model
